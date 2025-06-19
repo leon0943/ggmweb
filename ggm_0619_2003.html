@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>꽃가마 | GGOGGAMA - 지구별 구석구석 공연 따라 꽃가마</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* -------- RESET & BASE -------- */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, sans-serif;
+        color: #1a1a1a;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      :root {
+        --primary: #ef4034;
+        --primary-solid: #ef4034;
+        --secondary: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+        --accent: linear-gradient(135deg, #ffd93d 0%, #ef4034 100%);
+
+        --dark: #1a1a1a;
+        --light: #ffffff;
+        --gray-light: #f8f9fa;
+        --gray-medium: #6c757d;
+        --gray-dark: #343a40;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+        --glass: rgba(255, 255, 255, 0.1);
+        --glass-border: rgba(255, 255, 255, 0.2);
+      }
+
+      /* -------- UTILITIES -------- */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* -------- HEADER -------- */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem 0.1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .logo img {
+        height: 60px;
+        width: auto;
+      }
+
+      .nav-desktop {
+        display: none;
+        gap: 2rem;
+      }
+
+      .nav-desktop a {
+        font-weight: 500;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .nav-desktop a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: width 0.3s ease;
+      }
+
+      .nav-desktop a:hover::after {
+        width: 100%;
+      }
+
+      .nav-desktop a:hover {
+        color: var(--primary-solid);
+      }
+
+      /* Mobile Menu */
+      .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+      }
+
+      .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background: var(--dark);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        padding: 2rem;
+        transition: right 0.3s ease;
+        border-left: 1px solid var(--glass-border);
+      }
+
+      .mobile-menu.active {
+        right: 0;
+      }
+
+      .mobile-menu-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--dark);
+      }
+
+      .mobile-nav {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .mobile-nav a {
+        font-weight: 500;
+        color: var(--dark);
+        text-decoration: none;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        transition: color 0.3s ease;
+      }
+
+      .mobile-nav a:hover {
+        color: var(--primary-solid);
+      }
+
+      /* -------- HERO -------- */
+      .hero {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+      }
+
+      .slide::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.2)
+        );
+      }
+
+      .slide.active {
+        opacity: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        color: white;
+        max-width: 800px;
+        padding: 0 1rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        animation: slideUp 1s ease-out;
+      }
+
+      .hero p {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        margin-bottom: 2.5rem;
+        opacity: 0.9;
+        line-height: 1.7;
+        animation: slideUp 1s ease-out 0.3s both;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: slideUp 1s ease-out 0.6s both;
+      }
+
+      .btn-app-store {
+        background: rgba(30, 30, 30, 0.75);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.6rem 1.25rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        width: 160px;
+        justify-content: center;
+      }
+      .btn-app-store:hover {
+        background: rgba(50, 50, 50, 0.9);
+        transform: translateY(-2px);
+      }
+      .btn-app-store img {
+        height: 24px;
+      }
+
+      .photo-credit {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        opacity: 0.8;
+        z-index: 15;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* -------- SECTIONS -------- */
+      .section {
+        padding: 5rem 0;
+        position: relative;
+      }
+
+      .section:nth-child(even) {
+        background: var(--gray-light);
+      }
+
+      .section h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 700;
+        text-align: center;
+        background: var(--primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        word-break: keep-all;
+      }
+
+      .section p {
+        text-align: center;
+        color: var(--gray-medium);
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 1.7;
+      }
+
+      .section-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      /* -------- PORTFOLIO (Slogans 업데이트됨) -------- */
+      .slogans {
+        display: grid;
+        gap: 1.5rem;
+        margin: 3rem 0;
+      }
+
+      .slogan-card {
+        background: var(--light);
+        color: var(--gray-dark);
+        padding: 2.5rem 2rem;
+        border-radius: 20px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.1rem;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        border: 1px solid #eee;
+      }
+
+      .slogan-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .slogan-card:first-child strong {
+        color: var(--primary-solid);
+        font-weight: 700;
+      }
+
+      /* -------- HISTORY -------- */
+      .history-section {
+        background: var(--dark);
+        color: white;
+      }
+
+      .history-section h2 {
+        color: var(--primary-solid);
+        background: none;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+        background-clip: initial;
+      }
+
+      .history-section p {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .history {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        list-style: none;
+      }
+
+      .history li {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 15px;
+        border-left: 4px solid var(--primary-solid);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+
+      .history li:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateX(10px);
+      }
+
+      .history .date {
+        width: 80px;
+        flex-shrink: 0;
+        font-weight: 700;
+        color: var(--primary-solid);
+      }
+
+      .history .description {
+        flex-grow: 1;
+      }
+
+      /* -------- CONTACT / SOCIAL -------- */
+      .contact-section {
+        background: var(--gray-light);
+      }
+
+      .social-card {
+        margin: 0 auto;
+        background: transparent;
+        padding: 0;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 0;
+      }
+
+      .social-links a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .social-links a:hover {
+        transform: scale(1.1);
+      }
+
+      .social-links img {
+        width: 48px;
+        height: 48px;
+      }
+
+      /* -------- FOOTER -------- */
+      footer {
+        background: var(--dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3rem 0 2rem;
+      }
+
+      .footer-content {
+        display: grid;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h4 {
+        color: white;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .footer-section a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-section a:hover {
+        color: var(--primary-solid);
+      }
+
+      .footer-section .footer-contact-link {
+        color: white;
+        font-weight: 500;
+      }
+      .footer-section .footer-contact-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* -------- ANIMATIONS -------- */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* -------- SCROLL INDICATORS -------- */
+      .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--primary);
+        transform-origin: left;
+        transform: scaleX(0);
+        z-index: 9999;
+      }
+
+      /* -------- RESPONSIVE STYLES -------- */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 1rem;
+        }
+
+        .nav-desktop {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: flex;
+        }
+
+        .mobile-br::after {
+          content: "\A";
+          white-space: pre;
+        }
+
+        .hero .slide:nth-child(1) {
+          background-position: 70% center;
+        }
+        .hero .slide:nth-child(2) {
+          background-position: center center;
+        }
+        .hero .slide:nth-child(3) {
+          background-position: 30% center;
+        }
+        .hero .slide:nth-child(4) {
+          background-position: right center;
+        }
+
+        .slogans {
+          grid-template-columns: 1fr;
+        }
+
+        .history {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-indicator"></div>
+
+    <header>
+      <div class="header-container">
+        <a href="#home" class="logo">
+          <img src="images/ggoggama_logo.png" alt="꽃가마 BI 로고" />
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="#home">홈</a>
+          <a href="#portfolio">소개</a>
+          <a href="#contact">문의</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+        <nav class="mobile-nav">
+          <a href="#home">홈</a>
+          <a href="#portfolio">소개</a>
+          <a href="#contact">문의</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home" class="hero">
+      <div
+        class="slide active"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw1.jpg');
+        "
+      >
+        <span class="photo-credit">HellFest, FR | Photo by Gamaggun Leon</span>
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw2.jpg');
+        "
+      >
+        <span class="photo-credit"
+          >Glastonbury, UK | Photo by Gamaggun Aqui</span
+        >
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw3.jpg');
+        "
+      >
+        <span class="photo-credit">WACKEN, DE | Photo by Gamaggun Leon</span>
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw4.jpg');
+        "
+      >
+        <span class="photo-credit">Pentaport, KR | Photo by Gamaggun Aqui</span>
+      </div>
+
+      <div class="hero-content">
+        <h1>
+          지구별 구석구석<br />
+          공연 따라 <strong>꽃가마</strong>
+        </h1>
+        <p>
+          <span class="mobile-br">설레는 출발부터 편안한 귀가까지,</span>
+          꽃가마가 당신의 하루를 완벽하게 만들어 드릴게요.<br />지금 바로 가장
+          빠르고 편리한 셔틀 예매를 시작하세요.
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="https://apple.co/47iW8RG"
+            class="btn-app-store"
+            target="_blank"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/apple.svg"
+              alt="App Store"
+              style="filter: invert(1)"
+            />
+            App Store
+          </a>
+          <a
+            href="https://bit.ly/3QiqrSq"
+            class="btn-app-store"
+            target="_blank"
+          >
+            <img
+              src="https://www.vectorlogo.zone/logos/google_play/google_play-icon.svg"
+              alt="Google Play"
+            />
+            Google Play
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>지구별 구석구석<br />공연 따라 꽃가마</h2>
+          <p>
+            공연을 즐기는 관점을 '보는' 것에서 '가는' 것으로 새롭게
+            정의했습니다. 새로운 출발의 설렘과 감동을 고스란히 간직할 수 있도록
+            섬세하게 케어하는 것, 이것이 바로 꽃가마의 사명입니다.
+          </p>
+        </div>
+        <div class="slogans">
+          <div class="slogan-card">
+            <strong>지구별 구석구석 공연 따라 꼭 가마</strong>
+          </div>
+          <div class="slogan-card">당신과 함께 즐거운 곳 가마</div>
+          <div class="slogan-card">도란도란 설렘 안고 곧 가마</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section history-section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>HISTORY</h2>
+          <p>
+            2012년부터 국내외 350여 개 행사의 셔틀 운영을 지원해 온 꽃가마의
+            발자취입니다.
+          </p>
+        </div>
+        <ul class="history">
+          <li>
+            <span class="date">2012.07</span
+            ><span class="description"
+              >꽃가마엔터테인먼트 설립 · 세계 최초 수요맞춤형셔틀(SOB) '꽃가마'
+              출시</span
+            >
+          </li>
+          <li>
+            <span class="date">2014.01</span
+            ><span class="description">㈜티켓몹 설립</span>
+          </li>
+          <li>
+            <span class="date">2014.08</span
+            ><span class="description"
+              >인천펜타포트록페스티벌 · 그랜드민트페스티벌 공식셔틀 지정</span
+            >
+          </li>
+          <li>
+            <span class="date">2015.08</span
+            ><span class="description"
+              >SUMMER SONIC 2015 꽃가마 원정대 출발</span
+            >
+          </li>
+          <li>
+            <span class="date">2017.06</span
+            ><span class="description"
+              >GLASTONBURY(UK) · ROCK WERCHTER(BE) · MONTREUX(CH) 꽃가마
+              원정대</span
+            >
+          </li>
+          <li>
+            <span class="date">2019.10</span
+            ><span class="description">웹 방문 100만 명 돌파</span>
+          </li>
+          <li>
+            <span class="date">2022.07</span
+            ><span class="description">꽃가마 웹 2.0 출시</span>
+          </li>
+          <li>
+            <span class="date">2023.07</span
+            ><span class="description">꽃가마 앱(AOS, iOS) 출시</span>
+          </li>
+          <li>
+            <span class="date">2023.12</span
+            ><span class="description">누적 주행거리 지구 7바퀴 달성</span>
+          </li>
+          <li>
+            <span class="date">2024.02</span
+            ><span class="description"
+              >MAROON 5 LIVE IN CONCERT 익스프레스 셔틀</span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>꽃가마의 여정 함께하기</h2>
+          <p>
+            다양한 페스티벌 현장의 생생한 모습과, 다음 여정에 대한 새로운 소식을
+            가장 먼저 전해드려요.
+          </p>
+          <div class="social-card">
+            <div class="social-links">
+              <a href="https://www.instagram.com/ggoggama" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+              <a href="https://blog.naver.com/ggoggama" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/naver.svg"
+                  alt="Naver Blog"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>꽃가마 | GGOGGAMA</h4>
+            <p>
+              (주)티켓몹 대표 차혜영 | Ticketmob Corp.<br />
+              서울 강남구 학동로 24길 20, 4층 402호<br />
+              사업자등록번호 101‑86‑86789<br />
+              관광사업등록번호 제2019‑000003호<br /><br />
+              전화:
+              <a href="tel:02-553-6999" class="footer-contact-link"
+                >02-553-6999</a
+              ><br />
+              이메일:
+              <a href="mailto:contact@ggoggama.com" class="footer-contact-link"
+                >contact@ggoggama.com</a
+              >
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>서비스</h4>
+            <p>
+              <a href="#">이용약관</a><br />
+              <a href="#">개인정보처리방침</a><br />
+              호스팅제공자: Amazon Web Services
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          Copyright © 2012 GGOGGAMA. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Slider functionality
+      const slides = document.querySelectorAll(".slide");
+      let currentSlide = 0;
+
+      function nextSlide() {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }
+
+      setInterval(nextSlide, 6000);
+
+      // Mobile menu functionality
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileMenuClose = document.getElementById("mobileMenuClose");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav a");
+
+      function toggleMobileMenu() {
+        mobileMenu.classList.toggle("active");
+      }
+
+      function closeMobileMenu() {
+        mobileMenu.classList.remove("active");
+      }
+
+      mobileMenuBtn.addEventListener("click", toggleMobileMenu);
+      mobileMenuClose.addEventListener("click", closeMobileMenu);
+
+      // Close mobile menu when clicking on nav links
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (
+          !mobileMenu.contains(e.target) &&
+          !mobileMenuBtn.contains(e.target)
+        ) {
+          closeMobileMenu();
+        }
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const headerHeight = document.querySelector("header").offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Scroll progress indicator
+      function updateScrollProgress() {
+        const scrollIndicator = document.querySelector(".scroll-indicator");
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = scrollTop / docHeight;
+
+        scrollIndicator.style.transform = `scaleX(${scrollPercent})`;
+      }
+
+      window.addEventListener("scroll", updateScrollProgress);
+
+      // Header background on scroll
+      function updateHeaderOnScroll() {
+        const header = document.querySelector("header");
+        const scrollTop = window.pageYOffset;
+
+        if (scrollTop > 100) {
+          header.style.background = "rgba(255, 255, 255, 0.98)";
+          header.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
+        } else {
+          header.style.background = "rgba(255, 255, 255, 0.95)";
+          header.style.boxShadow = "none";
+        }
+      }
+
+      window.addEventListener("scroll", updateHeaderOnScroll);
+
+      // Fade in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      // Add fade-in class to elements that should animate
+      document
+        .querySelectorAll(".section, .slogan-card, .history li, .social-card")
+        .forEach((el) => {
+          el.classList.add("fade-in");
+          observer.observe(el);
+        });
+
+      // Parallax effect for hero section
+      function updateParallax() {
+        const scrollTop = window.pageYOffset;
+        const hero = document.querySelector(".hero");
+        const heroHeight = hero.offsetHeight;
+
+        if (scrollTop < heroHeight) {
+          const slides = document.querySelectorAll(".slide");
+          slides.forEach((slide) => {
+            slide.style.transform = `translateY(${scrollTop * 0.5}px)`;
+          });
+        }
+      }
+
+      window.addEventListener("scroll", updateParallax);
+
+      // Add stagger animation to history items
+      function staggerHistoryItems() {
+        const historyItems = document.querySelectorAll(".history li");
+        historyItems.forEach((item, index) => {
+          item.style.animationDelay = `${index * 0.1}s`;
+        });
+      }
+
+      // Initialize stagger animation when history section is visible
+      const historySection = document.querySelector(".history-section");
+      const historyObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              staggerHistoryItems();
+              historyObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      if (historySection) {
+        historyObserver.observe(historySection);
+      }
+
+      // Keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        // ESC key closes mobile menu
+        if (e.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+
+      // Performance optimization: throttle scroll events
+      function throttle(func, limit) {
+        let inThrottle;
+        return function () {
+          const args = arguments;
+          const context = this;
+          if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+          }
+        };
+      }
+
+      // Apply throttling to scroll events
+      const throttledScrollHandler = throttle(() => {
+        updateScrollProgress();
+        updateHeaderOnScroll();
+        updateParallax();
+      }, 16); // ~60fps
+
+      // Initialize page
+      document.addEventListener("DOMContentLoaded", () => {
+        // Add initial animations
+        const heroContent = document.querySelector(".hero-content");
+        if (heroContent) {
+          heroContent.style.opacity = "0";
+          heroContent.style.transform = "translateY(50px)";
+
+          setTimeout(() => {
+            heroContent.style.transition = "all 1s ease-out";
+            heroContent.style.opacity = "1";
+            heroContent.style.transform = "translateY(0)";
+          }, 500);
+        }
+
+        // Preload next slide images
+        slides.forEach((slide, index) => {
+          if (index > 0) {
+            const bgImage = slide.style.backgroundImage;
+            const imageUrl = bgImage.slice(
+              bgImage.indexOf('url("') + 5,
+              bgImage.lastIndexOf('")')
+            );
+            const img = new Image();
+            img.src = imageUrl;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

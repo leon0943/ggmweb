@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>꽃가마 | GGOGGAMA - 지구별 구석구석 공연 따라 꽃가마</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scroll-indicator"></div>
+
+    <header>
+      <div class="header-container">
+        <a href="#home" class="logo">
+          <img src="images/ggoggama_logo.png" alt="꽃가마 BI 로고" />
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="#features">소개</a>
+          <a href="#trust">연혁</a>
+          <a href="#contact">함께하기</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+        <nav class="mobile-nav">
+          <a href="#features">소개</a>
+          <a href="#trust">연혁</a>
+          <a href="#contact">함께하기</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home" class="hero">
+      <div
+        class="slide active"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw1.jpg');
+        "
+      >
+        <span class="photo-credit">HELLFEST, FR | Photo by Gamaggun Leon</span>
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw2.jpg');
+        "
+      >
+        <span class="photo-credit"
+          >GLASTONBURY, UK | Photo by Gamaggun Aqui</span
+        >
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw3.jpg');
+        "
+      >
+        <span class="photo-credit">WACKEN, DE | Photo by Gamaggun Leon</span>
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw4.jpg');
+        "
+      >
+        <span class="photo-credit">PENTAPORT, KR | Photo by Gamaggun Aqui</span>
+      </div>
+
+      <div class="hero-content">
+        <h1>
+          지구별 구석구석<br />
+          공연 따라 <strong>꽃가마</strong>
+        </h1>
+        <p>
+          <span class="mobile-br">설레는 출발부터 편안한 귀가까지,</span>
+          꽃가마가 당신의 하루를 완벽하게 만들어 드릴게요.<br />지금 바로 가장
+          빠르고 편리한 셔틀 예매를 시작하세요.
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="https://apple.co/47iW8RG"
+            class="btn-app-store"
+            target="_blank"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/apple.svg"
+              alt="App Store"
+              style="filter: invert(1)"
+            />
+            App Store
+          </a>
+          <a
+            href="https://bit.ly/3QiqrSq"
+            class="btn-app-store"
+            target="_blank"
+          >
+            <img
+              src="https://www.vectorlogo.zone/logos/google_play/google_play-icon.svg"
+              alt="Google Play"
+            />
+            Google Play
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <section id="features" class="section feature-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="text-content">
+            <p class="section-label">셔틀 버스 예매</p>
+            <h2>앱 하나로 끝내는<br />공연 여행의 모든 것</h2>
+            <p class="section-description">
+              흩어져 있는 페스티벌, 공연 셔틀을 꽃가마 앱에서 한눈에
+              모아보고,<br />
+              몇 번의 터치만으로 간편하게 예약하고 탑승하세요.
+            </p>
+          </div>
+          <div class="media-content">
+            <img src="images/app1.png" alt="꽃가마 앱 예매 화면" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="container">
+        <div class="feature-grid reverse">
+          <div class="text-content">
+            <p class="section-label">증편 기능</p>
+            <h2>매진이어도 괜찮아요<br />증편 요청으로 추가 버스 확보</h2>
+            <p class="section-description">
+              요청 인원이 확보되면 증편 버스가 투입됩니다.<br />매진된
+              노선이라도 실망하지 말고,<br />증편을 요청하여 추가 버스를 기다려
+              보세요.
+            </p>
+          </div>
+          <div class="media-content">
+            <img src="images/app2.png" alt="증편 요청 화면" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="text-content">
+            <p class="section-label">콜가마</p>
+            <h2>원하는 곳 어디든<br />버스를 부르세요</h2>
+            <p class="section-description">
+              축제, 콘서트뿐만 아니라 워크샵, 등산 등 우리만의 이동이 필요할
+              때,<br />
+              원하는 노선으로 꽃가마를 불러보세요.
+            </p>
+          </div>
+          <div class="media-content">
+            <img src="images/app3.png" alt="콜가마 요청 화면" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trust" class="section numbers-section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>숫자로 증명하는 13년</h2>
+          <p>수많은 관객들과 주최측이 꽃가마를 신뢰하는 이유입니다.</p>
+          <p class="b2b-description">
+            13년의 업력으로 축적된 관제 노하우로, 백여 대의 버스와 수만 명의
+            관객을 실시간으로 통솔하여<br />
+            가장 복잡한 현장도 질서 있고 편안한 여정으로 만듭니다.
+          </p>
+        </div>
+        <div class="numbers-grid">
+          <div class="number-item">
+            <h3>SINCE 2012</h3>
+            <p>대한민국 최초의<br />수요응답형 모빌리티</p>
+          </div>
+          <div class="number-item">
+            <h3>350+</h3>
+            <p>함께한 페스티벌<br />& 이벤트</p>
+          </div>
+          <div class="number-item">
+            <h3>280,000+ km</h3>
+            <p>누적 운행 거리<br />(지구 7바퀴)</p>
+          </div>
+          <div class="number-item">
+            <h3>325+</h3>
+            <p>함께한 전·현직<br />'가마꾼' 스태프</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>꽃가마의 여정 함께하기</h2>
+          <p>
+            다양한 페스티벌 현장의 생생한 모습과, 다음 여정에 대한 새로운 소식을
+            가장 먼저 전해드려요.
+          </p>
+          <div class="social-card">
+            <div class="social-links">
+              <a href="https://www.instagram.com/ggoggama" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"
+                  alt="Instagram"
+                />
+              </a>
+              <a href="https://blog.naver.com/ggoggama" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/naver.svg"
+                  alt="Naver Blog"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>꽃가마 | GGOGGAMA</h4>
+            <p>
+              (주)티켓몹 대표 차혜영 | Ticketmob Corp.<br />
+              서울 강남구 학동로 24길 20, 4층 402호<br />
+              사업자등록번호 101‑86‑86789<br />
+              관광사업등록번호 제2019‑000003호<br /><br />
+              전화:
+              <a href="tel:02-553-6999" class="footer-contact-link"
+                >02-553-6999</a
+              ><br />
+              이메일:
+              <a href="mailto:contact@ggoggama.com" class="footer-contact-link"
+                >contact@ggoggama.com</a
+              >
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>서비스</h4>
+            <p>
+              <a href="#">이용약관</a><br />
+              <a href="#">개인정보처리방침</a><br />
+              호스팅제공자: Amazon Web Services
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          Copyright © 2012 GGOGGAMA. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
