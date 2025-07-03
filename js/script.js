@@ -82,8 +82,7 @@ function updateHeaderOnScroll() {
 
 // Fade in animation on scroll
 const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px",
+  threshold: 0.2,
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -94,10 +93,10 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Add fade-in class to elements that should animate
+// (수정) 애니메이션 적용 대상을 새로운 클래스에 맞게 변경
 document
   .querySelectorAll(
-    ".feature-section, .numbers-section, .contact-section, .number-item"
+    ".feature-section, .history-section, .contact-section, .timeline-item, .social-card"
   )
   .forEach((el) => {
     el.classList.add("fade-in");
@@ -116,32 +115,6 @@ function updateParallax() {
       slide.style.transform = `translateY(${scrollTop * 0.5}px)`;
     });
   }
-}
-
-// Add stagger animation to history items
-function staggerHistoryItems() {
-  const historyItems = document.querySelectorAll(".history li");
-  historyItems.forEach((item, index) => {
-    item.style.animationDelay = `${index * 0.1}s`;
-  });
-}
-
-// Initialize stagger animation when history section is visible
-const historySection = document.querySelector(".history-section");
-const historyObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        staggerHistoryItems();
-        historyObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.3 }
-);
-
-if (historySection) {
-  historyObserver.observe(historySection);
 }
 
 // Keyboard navigation

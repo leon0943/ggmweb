@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GGOGGAMA - Your Ride to Gigs and Festivals Everywhere</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="scroll-indicator"></div>
+
+    <header>
+      <div class="header-container">
+        <a href="#home" class="logo">
+          <img src="../images/ggoggama_logo.png" alt="GGOGGAMA BI Logo" />
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="#features">Features</a>
+          <a href="#history">History</a>
+          <a href="#contact">Contact</a>
+          <a href="../index.html" class="lang-btn">KOR</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+        <nav class="mobile-nav">
+          <a href="#features">Features</a>
+          <a href="#history">History</a>
+          <a href="#contact">Contact</a>
+          <a href="../index.html" class="lang-btn">KOR</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home" class="hero">
+      <div
+        class="slide active"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('../images/bw1.jpg');
+        "
+      >
+        <span class="photo-credit">HELLFEST, FR | Photo by Gamaggun Leon</span>
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('../images/bw2.jpg');
+        "
+      >
+        <span class="photo-credit"
+          >GLASTONBURY, UK | Photo by Gamaggun Aqui</span
+        >
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('../images/bw3.jpg');
+        "
+      >
+        <span class="photo-credit">WACKEN, DE | Photo by Gamaggun Leon</span>
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('../images/bw4.jpg');
+        "
+      >
+        <span class="photo-credit">PENTAPORT, KR | Photo by Gamaggun Aqui</span>
+      </div>
+
+      <div class="hero-content">
+        <h1>
+          Your Global Shuttle to Every Gig,<br />
+          with <strong>GGOGGAMA</strong>
+        </h1>
+        <p>
+          <span class="mobile-br"
+            >From the exciting start to a comfortable ride home,</span
+          >
+          Make your day seamless with GGOGGAMA—start your booking now!
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="https://apple.co/47iW8RG"
+            class="btn-app-store"
+            target="_blank"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/apple.svg"
+              alt="App Store"
+              style="filter: invert(1)"
+            />
+            App Store
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ggoggama.app&pcampaignid=web_share"
+            class="btn-app-store"
+            target="_blank"
+          >
+            <img
+              src="https://www.vectorlogo.zone/logos/google_play/google_play-icon.svg"
+              alt="Google Play"
+            />
+            Google Play
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <section id="features" class="section feature-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="text-content">
+            <p class="section-label">Shuttle Bus Booking</p>
+            <h2>All Your Concert Travel<br />in a Single App</h2>
+            <p class="section-description">
+              See all scattered festival and concert shuttles at a glance in the
+              GGOGGAMA app. Book and board easily with just a few taps.
+            </p>
+          </div>
+          <div class="media-content">
+            <div class="phone-mockup">
+              <img src="../images/app1.png" alt="GGOGGAMA app booking screen" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="container">
+        <div class="feature-grid reverse">
+          <div class="text-content">
+            <p class="section-label">Extra Buses</p>
+            <h2>Sold Out? No Problem.<br />Request More Buses</h2>
+            <p class="section-description">
+              When enough requests are gathered, we add more buses. Don't be
+              disappointed by sold-out routes—request an extra bus and wait for
+              it to be confirmed.
+            </p>
+          </div>
+          <div class="media-content">
+            <div class="phone-mockup">
+              <img src="../images/app2.png" alt="Requesting extra bus screen" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="text-content">
+            <p class="section-label">CALL-GAMA</p>
+            <h2>Need a Bus for Any Event?<br />Just CALL-GAMA</h2>
+            <p class="section-description">
+              When you need a private ride for workshops, hiking trips, or any
+              other event, not just festivals, call a GGOGGAMA bus on your
+              desired route.
+            </p>
+          </div>
+          <div class="media-content">
+            <div class="phone-mockup">
+              <img src="../images/app3.png" alt="Call-gama request screen" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="section history-section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>13 Years of Riding with You</h2>
+          <p>
+            The story of why countless audiences and organizers trust GGOGGAMA,
+            proven by numbers.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2012</h4>
+              <ul class="timeline-details">
+                <li>
+                  Launched 'GGOGGAMA', the world's first demand-responsive
+                  shuttle service.
+                </li>
+                <li>
+                  Pilot shuttle service for the Busan Int'l Film Festival.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2013</h4>
+              <ul class="timeline-details">
+                <li>GGOGGAMA web service launched.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2014</h4>
+              <ul class="timeline-details">
+                <li>Mobile service launched.</li>
+                <li>
+                  Designated as the official shuttle for Incheon Pentaport Rock
+                  Festival.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2015</h4>
+              <ul class="timeline-details">
+                <li>Official ticket partner for SUMMER SONIC in Japan.</li>
+                <li>Launched the 'GGOGGAMA Expedition' to SUMMER SONIC.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2016</h4>
+              <ul class="timeline-details">
+                <li>Official shuttle for DMZ Peace Train Music Festival.</li>
+                <li>Reached 100,000 passengers & 500,000 site visits.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2017</h4>
+              <ul class="timeline-details">
+                <li>
+                  Launched GGOGGAMA Expeditions to GLASTONBURY(UK), ROCK
+                  WERCHTER(BE) & MONTREUX(CH).
+                </li>
+                <li>Official travel partner for FUJI ROCK FESTIVAL.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2018</h4>
+              <ul class="timeline-details">
+                <li>Official shuttle for Incheon Pentaport Rock Festival.</li>
+                <li>Official shuttle for the Overwatch World Cup.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2019</h4>
+              <ul class="timeline-details">
+                <li>Official shuttle for Holiday Land Festival.</li>
+                <li>Official shuttle for Incheon Pentaport Rock Festival.</li>
+                <li>Exceeded 1 million website visits.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2021</h4>
+              <ul class="timeline-details">
+                <li>
+                  Selected as an outstanding company for technology evaluation.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2022</h4>
+              <ul class="timeline-details">
+                <li>Official shuttle for Incheon Pentaport Rock Festival.</li>
+                <li>
+                  Staff shuttle for DMZ Peace Train Music Festival & University
+                  Rivalry Games.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2023</h4>
+              <ul class="timeline-details">
+                <li>Official shuttle for HAVE A NICE TRIP.</li>
+                <li>Launched the GGOGGAMA App (AOS, iOS).</li>
+                <li>Official shuttle for Jarasum Int'l Jazz Festival.</li>
+                <li>Total travel distance reached 7 laps around the Earth.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2024</h4>
+              <ul class="timeline-details">
+                <li>Official shuttle for MAROON 5 LIVE IN CONCERT.</li>
+                <li>Official shuttle for Incheon Pentaport Rock Festival.</li>
+                <li>
+                  Official shuttle for EXO, Weverse Con, ULTRA KOREA, Lee
+                  Seung-chul, SBS Gayo Daejeon, Epik High, TAEMIN CONCERT,
+                  Jarasum Jazz Festival, and more.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2025</h4>
+              <ul class="timeline-details">
+                <li>Official shuttle for TAEYANG CONCERT.</li>
+                <li>Official shuttle for GUNS N' ROSES.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>Join the GGOGGAMA Journey</h2>
+          <p>
+            Get the latest news on our next journeys and vivid scenes from
+            various festival sites first.
+          </p>
+        </div>
+        <div class="social-grid">
+          <a
+            href="https://www.instagram.com/ggoggama"
+            target="_blank"
+            class="social-card"
+          >
+            <div class="social-icon instagram">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"
+                alt="Instagram"
+              />
+            </div>
+            <div class="social-content">
+              <h3>Instagram</h3>
+              <p>The fastest news from GGOGGAMA</p>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+          <a
+            href="https://blog.naver.com/ggoggama"
+            target="_blank"
+            class="social-card"
+          >
+            <div class="social-icon naver">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/naver.svg"
+                alt="Naver Blog"
+              />
+            </div>
+            <div class="social-content">
+              <h3>Blog</h3>
+              <p>Detailed shuttle info and useful travel tips</p>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>GGOGGAMA</h4>
+            <p>
+              Ticketmob Corp. | CEO: Hyeyoung Cha<br />
+              4F, 402, 20, Hakdong-ro 24-gil, Gangnam-gu, Seoul, R.O.K.<br />
+              Business Registration No: 101‑86‑86789<br />
+              Tourism Business Registration No: 2019‑000003<br />
+              Online Sales Registration No: 2025-서울강남-03620<br /><br />
+              Phone:
+              <a href="tel:1551-9712" class="footer-contact-link">1551-9712</a
+              ><br />
+              Email:
+              <a href="mailto:contact@ggoggama.com" class="footer-contact-link"
+                >contact@ggoggama.com</a
+              >
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>SERVICE</h4>
+            <p>
+              <a href="../pages/terms.html">Terms of Service</a><br />
+              <a href="../pages/privacy.html">Privacy Policy</a><br />
+              Hosted by: Amazon Web Services
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          Copyright © 2012 GGOGGAMA. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

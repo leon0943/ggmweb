@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>꽃가마 | GGOGGAMA - 지구별 구석구석 공연 따라 꽃가마</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="scroll-indicator"></div>
+
+    <header>
+      <div class="header-container">
+        <a href="#home" class="logo">
+          <img src="images/ggoggama_logo.png" alt="꽃가마 BI 로고" />
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="#features">기능</a>
+          <a href="#history">연혁</a>
+          <a href="#contact">함께하기</a>
+          <a href="en/index_en.html" class="lang-btn">ENG</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+        <nav class="mobile-nav">
+          <a href="#features">기능</a>
+          <a href="#history">연혁</a>
+          <a href="#contact">함께하기</a>
+          <a href="en/index_en.html" class="lang-btn">ENG</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home" class="hero">
+      <div
+        class="slide active"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw1.jpg');
+        "
+      >
+        <span class="photo-credit">HELLFEST, FR | Photo by Gamaggun Leon</span>
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw2.jpg');
+        "
+      >
+        <span class="photo-credit"
+          >GLASTONBURY, UK | Photo by Gamaggun Aqui</span
+        >
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw3.jpg');
+        "
+      >
+        <span class="photo-credit">WACKEN, DE | Photo by Gamaggun Leon</span>
+      </div>
+      <div
+        class="slide"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.3),
+              rgba(0, 0, 0, 0.3)
+            ),
+            url('images/bw4.jpg');
+        "
+      >
+        <span class="photo-credit">PENTAPORT, KR | Photo by Gamaggun Aqui</span>
+      </div>
+
+      <div class="hero-content">
+        <h1>
+          지구별 구석구석<br />
+          공연 따라 <strong>꽃가마</strong>
+        </h1>
+        <p>
+          <span class="mobile-br">설레는 출발부터 편안한 귀가까지,</span>
+          꽃가마가 당신의 하루를 완벽하게 만들어 드릴게요.<br />지금 바로 가장
+          빠르고 편리한 셔틀 예매를 시작하세요.
+        </p>
+        <div class="hero-buttons">
+          <a
+            href="https://apple.co/47iW8RG"
+            class="btn-app-store"
+            target="_blank"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/apple.svg"
+              alt="App Store"
+              style="filter: invert(1)"
+            />
+            App Store
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ggoggama.app&pcampaignid=web_share"
+            class="btn-app-store"
+            target="_blank"
+          >
+            <img
+              src="https://www.vectorlogo.zone/logos/google_play/google_play-icon.svg"
+              alt="Google Play"
+            />
+            Google Play
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <section id="features" class="section feature-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="text-content">
+            <p class="section-label">셔틀 버스 예매</p>
+            <h2>앱 하나로 끝내는<br />공연 여행의 모든 것</h2>
+            <p class="section-description">
+              흩어져 있는 페스티벌, 공연 셔틀을 꽃가마 앱에서 한눈에 모아보고,
+              몇 번의 터치만으로 간편하게 예약하고 탑승하세요.
+            </p>
+          </div>
+          <div class="media-content">
+            <div class="phone-mockup">
+              <img src="images/app1.png" alt="꽃가마 앱 예매 화면" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="container">
+        <div class="feature-grid reverse">
+          <div class="text-content">
+            <p class="section-label">증편 기능</p>
+            <h2>매진이어도 괜찮아요<br />증편 요청으로 추가 버스 확보</h2>
+            <p class="section-description">
+              요청 인원이 확보되면 증편 버스가 투입됩니다. 매진된 노선이라도
+              실망하지 말고, 증편을 요청하여 추가 버스를 기다려 보세요.
+            </p>
+          </div>
+          <div class="media-content">
+            <div class="phone-mockup">
+              <img src="images/app2.png" alt="증편 요청 화면" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="text-content">
+            <p class="section-label">콜가마</p>
+            <h2>원하는 곳 어디든<br />버스를 부르세요</h2>
+            <p class="section-description">
+              축제, 콘서트뿐만 아니라 워크샵, 등산 등 우리만의 이동이 필요할 때,
+              원하는 노선으로 꽃가마를 불러보세요.
+            </p>
+          </div>
+          <div class="media-content">
+            <div class="phone-mockup">
+              <img src="images/app3.png" alt="콜가마 요청 화면" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="section history-section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>13년간의 발자취</h2>
+          <p>
+            수많은 관객과 주최측이 꽃가마를 신뢰하는 이유, 숫자로 증명된
+            이야기입니다.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2012</h4>
+              <ul class="timeline-details">
+                <li>세계 최초 수요맞춤형 셔틀 '꽃가마' 출시</li>
+                <li>부산국제영화제 셔틀 시범서비스</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2013</h4>
+              <ul class="timeline-details">
+                <li>꽃가마 웹서비스 시작</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2014</h4>
+              <ul class="timeline-details">
+                <li>모바일 서비스 시작</li>
+                <li>인천펜타포트록페스티벌 공식셔틀 지정</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2015</h4>
+              <ul class="timeline-details">
+                <li>일본 SUMMER SONIC 공식예매처 지정</li>
+                <li>일본 SUMMER SONIC 2015 꽃가마 원정대 출발</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2016</h4>
+              <ul class="timeline-details">
+                <li>DMZ피스트레인 뮤직페스티벌 공식셔틀 지정</li>
+                <li>꽃가마 셔틀 10만 명 · 사이트 50만 방문 돌파</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2017</h4>
+              <ul class="timeline-details">
+                <li>
+                  GLASTONBURY(UK) · ROCK WERCHTER(BE) · MONTREUX(CH) 꽃가마
+                  원정대 출발
+                </li>
+                <li>FUJI ROCK FESTIVAL 공식여행사</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2018</h4>
+              <ul class="timeline-details">
+                <li>인천펜타포트락페스티벌 공식셔틀 지정</li>
+                <li>오버워치 세계선수권대회 공식셔틀</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2019</h4>
+              <ul class="timeline-details">
+                <li>홀리데이랜드 공식셔틀 지정</li>
+                <li>인천펜타포트락페스티벌 공식셔틀 지정</li>
+                <li>웹 방문 100만 명 돌파</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2021</h4>
+              <ul class="timeline-details">
+                <li>기술평가우수인증기업 선정</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2022</h4>
+              <ul class="timeline-details">
+                <li>인천펜타포트락페스티벌 공식셔틀 지정</li>
+                <li>DMZ피스트레인 뮤직페스티벌 · 연고전 관계자 셔틀</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2023</h4>
+              <ul class="timeline-details">
+                <li>HAVE A NICE TRIP 공식셔틀 지정</li>
+                <li>꽃가마 앱(AOS, iOS) 출시</li>
+                <li>자라섬국제재즈페스티벌 공식셔틀 지정</li>
+                <li>누적 주행거리 지구 7바퀴 달성</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2024</h4>
+              <ul class="timeline-details">
+                <li>MAROON 5 LIVE IN CONCERT 공식 셔틀 지정</li>
+                <li>인천펜타포트락페스티벌 공식셔틀 지정</li>
+                <li>
+                  EXO, 위버스콘, ULTRA KOREA, 이승철, SBS가요대전, 에픽하이,
+                  태민콘서트, 자라섬재즈페스티벌 등 공식 셔틀 지정
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4 class="timeline-year">2025</h4>
+              <ul class="timeline-details">
+                <li>태양 콘서트 공식 셔틀 지정</li>
+                <li>GUNS N' ROSES 공식 셔틀 지정</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-content-wrapper">
+          <h2>꽃가마의 여정 함께하기</h2>
+          <p>
+            다양한 페스티벌 현장의 생생한 모습과, 다음 여정에 대한 새로운 소식을
+            가장 먼저 전해드려요.
+          </p>
+        </div>
+        <div class="social-grid">
+          <a
+            href="https://www.instagram.com/ggoggama"
+            target="_blank"
+            class="social-card"
+          >
+            <div class="social-icon instagram">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg"
+                alt="Instagram"
+              />
+            </div>
+            <div class="social-content">
+              <h3>Instagram</h3>
+              <p>가장 빠른 꽃가마 소식</p>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+          <a
+            href="https://blog.naver.com/ggoggama"
+            target="_blank"
+            class="social-card"
+          >
+            <div class="social-icon naver">
+              <img
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/naver.svg"
+                alt="Naver Blog"
+              />
+            </div>
+            <div class="social-content">
+              <h3>Naver Blog</h3>
+              <p>자세한 셔틀 정보와 유용한 여행 팁</p>
+            </div>
+            <div class="social-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>꽃가마 | GGOGGAMA</h4>
+            <p>
+              (주)티켓몹 대표 차혜영 | Ticketmob Corp.<br />
+              서울 강남구 학동로 24길 20, 4층 402호<br />
+              사업자등록번호 101‑86‑86789<br />
+              관광사업등록번호 제2019‑000003호<br />
+              통신판매업 신고번호: 2025-서울강남-03620호<br /><br />
+              전화:
+              <a href="tel:1551-9712" class="footer-contact-link">1551-9712</a
+              ><br />
+              이메일:
+              <a href="mailto:contact@ggoggama.com" class="footer-contact-link"
+                >contact@ggoggama.com</a
+              >
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>서비스</h4>
+            <p>
+              <a href="pages/terms.html">이용약관</a><br />
+              <a href="pages/privacy.html">개인정보처리방침</a><br />
+              호스팅제공자: Amazon Web Services
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          Copyright © 2012 GGOGGAMA. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
